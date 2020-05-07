@@ -8,7 +8,7 @@ export class ImageUploadService {
   constructor(private http: HttpClient) {}
 
   imageUpload(imageForm: FormData) {
-    console.log('image uploading');
+    console.log('file uploading');
     return this.http.post('http://localhost:3000/api/v1/upload', imageForm);
   }
 }

@@ -7,7 +7,7 @@ const upload = require('./middleware/file-upload');
 app.use(bodyParser.json());
 app.use(cors());
 
-app.post('/api/v1/upload', upload.array('image', 1), (req, res) => {
+app.post('/api/v1/upload', upload.array('file', 1), (req, res) => {
   res.send({ image: req.file });
 });
 
