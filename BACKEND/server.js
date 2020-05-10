@@ -8,7 +8,7 @@ app.use(bodyParser.json());
 app.use(cors());
 
 app.post('/api/v1/upload', upload.array('file', 1), (req, res) => {
-  res.send({ image: req.file });
+  res.send({ file: req.file });
 });
 
 app.listen(3000, () => {
